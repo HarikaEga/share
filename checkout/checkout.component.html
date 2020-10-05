@@ -1,0 +1,187 @@
+<p>checkout works!</p>
+
+
+    
+      <div class="container">
+        <form [formGroup]="angForm" (ngSubmit)="onSubmit()">
+        
+          
+           
+              <h3>Billing Address</h3>
+             
+                <div class="form-group">
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" class="form-control" formControlName="name" placeholder="Enter full name">
+                  <span class="alert alert-danger" *ngIf="name.errors && name.touched">
+                    <span *ngIf="name.errors.required">Name cannot be empty!!</span>
+                   
+                    </span>
+                <br>
+
+                </div>
+               <div class="form-group">
+               <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              
+               <input type="text" class="form-control" formControlName="email" placeholder="john@example.com">
+               <span class="alert alert-danger" *ngIf="email.errors && email.touched">
+                <span *ngIf="email.errors.required">Email cannot be empty</span>
+                <span *ngIf="email.errors.pattern">Does not match Pattern {{email.errors.email.requiredPattern}}</span>
+             </span>
+             <br>
+               </div>
+               <div class="form-group">
+                <label for="email"><i class="fa fa-phone"></i> Phone Number</label>
+               
+                <input type="text" class="form-control" formControlName="phoneNumber" placeholder="567890322">
+                <span class="alert alert-danger" *ngIf="phoneNumber.errors && phoneNumber.touched">
+                  <span *ngIf="phoneNumber.errors.required">Enter phone number</span>
+                 
+                  </span>
+              <br>
+               
+                </div>
+               <div class="form-group" >
+               <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+               <input type="text" class="form-control" formControlName="address" placeholder="House No.  Street">
+          
+               <span class="alert alert-danger" *ngIf="address.errors && address.touched">
+                <span *ngIf="address.errors.required">Address cannot be empty!!</span>
+               
+                </span>
+            <br>
+            
+               </div>
+              
+               <div class="form-group">
+              
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+              
+                <input type="text" class="form-control" formControlName="city" placeholder="New York">
+                <span class="alert alert-danger" *ngIf="city.errors && city.touched">
+                  <span *ngIf="city.errors.required">City cannot be empty!!</span>
+                 
+                  </span>
+              
+               </div>
+
+               <div class="row">
+                <div class="col-50">
+                  <div class="form-group">
+                   <label for="state">State</label>
+                  
+                  
+                     <input type="text" class="form-control" formControlName="state" placeholder="NY">
+                     <span class="alert alert-danger" *ngIf="state.errors && state.touched">
+                      <span *ngIf="state.errors.required">State cannot be empty!!</span>
+                     
+                      </span>
+            
+                  </div>
+                </div>
+                <div class="col-50">
+                  <div class="form-group">
+                     <label for="zip">Zip</label>
+                      <input type="text" class="form-control" formControlName="zip" placeholder="10001">
+                      <span class="alert alert-danger" *ngIf="zip.errors && zip.touched">
+                        <span *ngIf="zip.errors.required">zip cannot be empty!!</span>
+                       
+                        </span>
+                
+                  </div>
+                </div>
+
+            </div>
+           
+  
+                <!-- <div class="col-50">
+                 <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                 <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>&nbsp;&nbsp;
+                  <i class="fa fa-cc-amex" style="color:blue;"></i>&nbsp;&nbsp;
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>&nbsp;&nbsp;
+                  <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+               <div class="form-group">
+                <label for="cname">Name on Card</label>
+                <input type="text" class="form-control" formControlName="cardname" placeholder="John More Doe">
+                <span class="alert alert-danger" *ngIf="cardname.errors && cardname.touched">
+                  <span *ngIf="cardname.errors.required">cardname cannot be empty!!</span>
+                 
+                  </span>
+                </div>
+               <div class="form-group">
+               <label for="ccnum">Credit card number</label>
+               <input type="text" class="form-control" formControlName="cardnumber" placeholder="1111-2222-3333-4444">
+               <span class="alert alert-danger" *ngIf="cardnumber.errors && cardnumber.touched">
+                <span *ngIf="cardnumber.errors.required">cardnumber cannot be empty!!</span>
+               
+                </span>
+               
+               </div>
+                <div class="form-group">
+                <label for="expmonth">Exp Month</label>
+             
+                <input type="text" class="form-control" formControlName="expmonth" placeholder="September">
+                <span class="alert alert-danger" *ngIf="expmonth.errors && expmonth.touched">
+                  <span *ngIf="expmonth.errors.required">Enter month of expiry</span>
+                 
+                  </span>
+               </div>
+                <div class="row">
+                <div class="col-50">
+
+                  <div class="form-group">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" class="form-control" formControlName="expyear" placeholder="2018">
+                    <span class="alert alert-danger" *ngIf="expyear.errors && expyear.touched">
+                      <span *ngIf="expyear.errors.required">enter year of expiry</span>
+                     
+                      </span>
+                  </div>
+                </div>
+                <div class="col-50">
+                  <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" class="form-control" formControlName="cvv" placeholder="352">
+                  <span class="alert alert-danger" *ngIf="cvv.errors && cvv.touched">
+                    <span *ngIf="cvv.errors.required">CVV cannot be empty</span>
+                   
+                    </span>
+                 </div>
+                </div>
+
+                 </div>
+                </div>-->
+              
+             
+            
+          
+               <div class="form-group">
+                 <label>
+                   <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                  </label>
+               </div>
+
+               <div class="form-group">
+                   <button type="submit"  [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success btn-block btn-lg">Continue to checkout</button>
+               </div>
+      </form>
+           </div>
+        
+ 
+ 
+        
+
+        <!-- <div class="col-25">
+         <div class="container">
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{trending.length}}</b></span></h4>
+        <p  *ngFor="let m of trending">{{m.productName}} <span class="price">Rs.{{m.price}}</span></p>
+        
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>{{grandTotal}}</b></span></p>
+        </div> -->
+       
+
+  
+  

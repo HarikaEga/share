@@ -1,0 +1,48 @@
+
+<div class="heading"><h2 class="w3-wide w3-center">CART</h2></div>
+<div class="row">
+<div class="col-75">
+<div class="container"> 
+<div class="row">
+    
+       
+<article  *ngFor="let m of trending" class="col-md-4 col-lg-3" >
+  
+  <div class="card-content">
+            
+                
+             
+              <img class="spectrum1" src="{{m.image}}"  alt="meow">
+             
+              <h5 class="spectrum-h2">{{m.productName}}</h5>
+                <p>{{m.productCategory}}</p>
+                <p class="text-align:right">Rs{{m.price}}</p>
+            
+       <p>Quantity :{{m.quantity}}</p>
+       <p><strong>Total Price:</strong>{{m.price*m.quantity}}</p>
+        
+    </div>
+      </article>
+      
+      </div>
+      </div>
+      <div>
+    </div>
+    <br/>
+    <br/>
+        <div class="col-25">
+            <div class="container">
+           <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{trending.length}}</b></span></h4>
+           <p  *ngFor="let m of trending">{{m.productName}} <span class="price">Rs.{{m.price}}</span></p>
+           
+           <hr>
+           <p>Total <span class="price" style="color:black"><b>{{grandTotal}}</b></span></p>
+           </div>
+        </div> 
+       <button class="btn btn-info" routerLink="checkout">CheckOut</button>
+      
+    
+        <router-outlet></router-outlet>
+    </div>
+    
+       
